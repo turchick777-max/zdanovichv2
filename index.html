@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Доктор Зданович и Мир Благополучия - Элитная психотерапия</title>
     <meta name="description" content="Алексей Анатольевич Зданович - врач-психиатр высшей категории, психотерапевт, сексолог. Практика с 1992 года. Премиум услуги психотерапии.">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-orange: #FF8C42;
@@ -22,6 +22,13 @@
             --shadow-warm: rgba(255, 140, 66, 0.15);
             --shadow-soft: rgba(255, 210, 63, 0.2);
             --shadow-blue: rgba(74, 158, 255, 0.15);
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
         }
 
         * {
@@ -31,7 +38,7 @@
         }
 
         body {
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Inter', sans-serif;
             font-weight: 400;
             line-height: 1.7;
             background: linear-gradient(135deg, var(--accent-warm) 0%, var(--white) 50%, var(--accent-light) 100%);
@@ -43,17 +50,17 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 30px;
+            padding: 0 1.5rem;
         }
 
         /* Header */
-        header {
-            background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
-            backdrop-filter: blur(20px);
-            border-bottom: 2px solid var(--primary-yellow);
+        .header {
             position: sticky;
             top: 0;
             z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid var(--primary-yellow);
             box-shadow: 0 8px 32px var(--shadow-soft);
         }
 
@@ -61,15 +68,15 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 0;
+            padding: 1.5rem 0;
             flex-wrap: wrap;
-            gap: 20px;
+            gap: 1.25rem;
         }
 
         .logo-section {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 1.5rem;
         }
 
         .logo {
@@ -113,24 +120,22 @@
             font-size: 2.2rem;
             font-weight: 800;
             color: var(--white);
-            font-family: 'Inter', sans-serif;
             text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
         .header-text h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.4rem;
+            font-size: 2rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-blue) 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             line-height: 1.2;
         }
 
         .motto {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: var(--text-medium);
             font-style: italic;
             font-weight: 500;
@@ -139,39 +144,39 @@
 
         .contact-info {
             text-align: right;
-            padding: 25px 30px;
+            padding: 1.5rem 1.875rem;
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
-            border-radius: 20px;
+            border-radius: 1.25rem;
             color: var(--white);
             box-shadow: 0 12px 35px var(--shadow-warm);
         }
 
         .contact-info h3 {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 0.5rem;
             text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .contact-info p {
-            font-size: 1rem;
+            font-size: 0.875rem;
             font-weight: 500;
             opacity: 0.95;
         }
 
         .cta-button {
+            display: inline-block;
             background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
             color: var(--primary-orange);
             border: none;
-            padding: 16px 32px;
+            padding: 1rem 2rem;
             border-radius: 50px;
             font-weight: 700;
             font-size: 1rem;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
-            margin-top: 12px;
+            margin-top: 0.75rem;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
             border: 2px solid transparent;
         }
@@ -183,7 +188,7 @@
         }
 
         /* Navigation */
-        nav {
+        .nav {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
             padding: 0;
             position: relative;
@@ -198,7 +203,7 @@
 
         .nav-item {
             background: transparent;
-            padding: 20px 28px;
+            padding: 1.25rem 1.75rem;
             cursor: pointer;
             transition: all 0.3s ease;
             color: var(--white);
@@ -207,6 +212,8 @@
             border-bottom: 3px solid transparent;
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: block;
         }
 
         .nav-item::before {
@@ -233,59 +240,53 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
 
-        /* Main Content */
-        main {
-            padding: 60px 0;
-            min-height: calc(100vh - 200px);
-        }
-
-        .section {
+        /* Mobile menu */
+        .mobile-menu-btn {
             display: none;
-            background: linear-gradient(135deg, var(--white) 0%, var(--accent-light) 100%);
-            margin: 30px 0;
-            padding: 50px;
-            border-radius: 25px;
-            box-shadow: 0 20px 60px var(--shadow-soft);
-            border: 2px solid var(--primary-yellow);
-            position: relative;
-            overflow: hidden;
+            background: none;
+            border: none;
+            color: var(--text-warm);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
         }
 
-        .section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 50%, var(--primary-blue) 100%);
+        .mobile-menu {
+            display: none;
+            background: var(--white);
+            border-top: 1px solid var(--gray-200);
+            padding: 1rem 0;
         }
 
-        .section.active {
+        .mobile-menu .nav-item {
             display: block;
-            animation: slideIn 0.6s ease-out;
+            padding: 0.75rem 0;
+            color: var(--text-warm);
+            text-decoration: none;
+            font-weight: 500;
         }
 
-        @keyframes slideIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(30px);
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0);
-            }
+        .mobile-menu .nav-item:hover {
+            color: var(--primary-orange);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section.hidden {
+            display: none;
         }
 
         .section h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 3.2rem;
+            font-size: 3rem;
             font-weight: 800;
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-blue) 100%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 40px;
+            margin-bottom: 2.5rem;
             text-align: center;
             position: relative;
         }
@@ -303,21 +304,17 @@
         }
 
         .section h3 {
-            font-family: 'Inter', sans-serif;
             color: var(--primary-orange);
             font-size: 2rem;
             font-weight: 700;
-            margin: 35px 0 20px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
+            margin: 2rem 0 1.25rem 0;
         }
 
         .section h4 {
             color: var(--text-medium);
             font-size: 1.5rem;
             font-weight: 600;
-            margin: 25px 0 15px 0;
+            margin: 1.5rem 0 1rem 0;
         }
 
         .section p, .section li {
@@ -330,10 +327,10 @@
         /* Hero Section */
         .hero {
             text-align: center;
-            padding: 80px 30px;
+            padding: 5rem 2rem;
             background: linear-gradient(135deg, var(--accent-warm) 0%, var(--white) 50%, var(--peach) 100%);
-            border-radius: 25px;
-            margin-bottom: 40px;
+            border-radius: 1.5rem;
+            margin-bottom: 2.5rem;
             position: relative;
             overflow: hidden;
         }
@@ -360,22 +357,21 @@
         }
 
         .hero h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--text-warm);
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.25rem;
             color: var(--text-medium);
-            margin: 25px 0;
+            margin: 1.5rem 0;
             font-weight: 600;
         }
 
         .hero-description {
-            font-size: 1.2rem;
+            font-size: 1.125rem;
             max-width: 900px;
             margin: 0 auto;
             color: var(--text-soft);
@@ -386,42 +382,19 @@
         .doctor-photos {
             display: flex;
             justify-content: center;
-            gap: 40px;
-            margin: 50px 0;
+            gap: 2.5rem;
+            margin: 3rem 0;
             flex-wrap: wrap;
         }
 
         .doctor-photo {
             border: 5px solid var(--primary-yellow);
-            border-radius: 20px;
+            border-radius: 1.25rem;
             box-shadow: 0 15px 40px var(--shadow-warm);
             transition: all 0.4s ease;
             max-width: 320px;
             overflow: hidden;
             position: relative;
-        }
-
-        .doctor-photo::before {
-            content: '';
-            position: absolute;
-            inset: -5px;
-            background: linear-gradient(45deg, var(--primary-yellow), var(--primary-orange), var(--primary-blue), var(--primary-yellow));
-            border-radius: 25px;
-            z-index: -1;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            background-size: 400% 400%;
-            animation: gradientShift 3s ease infinite;
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .doctor-photo:hover::before {
-            opacity: 1;
         }
 
         .doctor-photo:hover {
@@ -432,64 +405,43 @@
         .doctor-photo img {
             width: 100%;
             height: auto;
-            border-radius: 15px;
+            border-radius: 1rem;
             object-fit: cover;
         }
 
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-
-        .service-card {
+        /* Cards */
+        .card {
             background: linear-gradient(135deg, var(--white) 0%, var(--accent-warm) 100%);
-            padding: 35px;
-            border-radius: 20px;
+            padding: 2rem;
+            border-radius: 1.25rem;
             border: 3px solid var(--primary-yellow);
             transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(255, 210, 63, 0.1) 0%, rgba(255, 140, 66, 0.1) 100%);
-            transition: left 0.3s ease;
-            z-index: 1;
-        }
-
-        .service-card:hover::before {
-            left: 0;
-        }
-
-        .service-card:hover {
+        .card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 50px var(--shadow-warm);
             border-color: var(--primary-orange);
         }
 
-        .service-card > * {
-            position: relative;
-            z-index: 2;
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
 
         .price {
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
             color: var(--white);
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             border-radius: 25px;
             font-weight: 700;
             font-size: 1.1rem;
             display: inline-block;
-            margin-top: 15px;
+            margin-top: 1rem;
             box-shadow: 0 5px 15px var(--shadow-warm);
             text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
@@ -499,28 +451,6 @@
             background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%);
             color: var(--white);
             border: none;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .premium-card::before {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            background: linear-gradient(45deg, var(--primary-yellow), var(--primary-orange), var(--primary-blue), var(--primary-yellow));
-            border-radius: 22px;
-            z-index: -1;
-            animation: borderShine 4s linear infinite;
-            background-size: 400% 400%;
-        }
-
-        @keyframes borderShine {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
         }
 
         .premium-card h4,
@@ -540,35 +470,24 @@
             text-align: center;
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-orange) 100%);
             color: var(--white);
-            padding: 50px;
-            border-radius: 25px;
-            margin: 40px 0;
+            padding: 3rem;
+            border-radius: 1.5rem;
+            margin: 2.5rem 0;
             position: relative;
             overflow: hidden;
-        }
-
-        .payment-section::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: float 10s ease-in-out infinite reverse;
         }
 
         .payment-button {
             background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
             color: var(--primary-orange);
-            padding: 18px 35px;
+            padding: 1.125rem 2.25rem;
             border: none;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1.125rem;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
-            margin: 25px 15px;
+            margin: 1.5rem 1rem;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
             position: relative;
             z-index: 2;
@@ -581,12 +500,22 @@
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
         }
 
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, var(--accent-warm) 0%, var(--white) 100%);
+            padding: 2.5rem;
+            border-radius: 1.25rem;
+            margin: 2rem 0;
+            border: 3px solid var(--primary-yellow);
+            box-shadow: 0 12px 35px var(--shadow-soft);
+        }
+
         /* Reviews */
         .review-card {
             background: linear-gradient(135deg, var(--white) 0%, var(--accent-warm) 100%);
-            padding: 35px;
-            margin: 25px 0;
-            border-radius: 20px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border-radius: 1.25rem;
             border-left: 6px solid var(--primary-orange);
             box-shadow: 0 15px 40px var(--shadow-warm);
             transition: all 0.3s ease;
@@ -600,8 +529,8 @@
         /* Q&A */
         .qa-item {
             background: var(--white);
-            margin: 20px 0;
-            border-radius: 15px;
+            margin: 1.25rem 0;
+            border-radius: 1rem;
             overflow: hidden;
             border: 2px solid var(--primary-yellow);
             box-shadow: 0 8px 25px var(--shadow-soft);
@@ -610,7 +539,7 @@
         .qa-question {
             background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--primary-orange) 100%);
             color: var(--white);
-            padding: 20px 25px;
+            padding: 1.25rem 1.5rem;
             cursor: pointer;
             font-weight: 700;
             display: flex;
@@ -625,7 +554,7 @@
         }
 
         .qa-answer {
-            padding: 25px;
+            padding: 1.5rem;
             display: none;
             background: linear-gradient(135deg, var(--accent-light) 0%, var(--white) 100%);
             color: var(--text-warm);
@@ -646,14 +575,14 @@
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
 
         .contact-card {
             background: linear-gradient(135deg, var(--white) 0%, var(--accent-warm) 100%);
-            padding: 30px;
-            border-radius: 20px;
+            padding: 2rem;
+            border-radius: 1.25rem;
             text-align: center;
             border: 3px solid var(--primary-yellow);
             transition: all 0.3s ease;
@@ -667,8 +596,8 @@
 
         .contact-card h4 {
             color: var(--primary-orange);
-            margin-bottom: 20px;
-            font-size: 1.4rem;
+            margin-bottom: 1.25rem;
+            font-size: 1.25rem;
             font-weight: 700;
         }
 
@@ -687,14 +616,14 @@
         .book-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            margin: 30px 0;
+            gap: 1.5rem;
+            margin: 2rem 0;
         }
 
         .book-item {
             background: linear-gradient(135deg, var(--white) 0%, var(--accent-warm) 100%);
-            padding: 25px;
-            border-radius: 15px;
+            padding: 1.5rem;
+            border-radius: 1rem;
             border-left: 5px solid var(--primary-blue);
             box-shadow: 0 8px 25px var(--shadow-soft);
             transition: all 0.3s ease;
@@ -707,9 +636,9 @@
 
         .music-category {
             background: linear-gradient(135deg, var(--white) 0%, var(--accent-warm) 100%);
-            margin: 25px 0;
-            padding: 30px;
-            border-radius: 15px;
+            margin: 1.5rem 0;
+            padding: 2rem;
+            border-radius: 1rem;
             border: 3px solid var(--primary-yellow);
             box-shadow: 0 8px 25px var(--shadow-soft);
         }
@@ -717,14 +646,14 @@
         .music-list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
+            gap: 1.25rem;
+            margin-top: 1.25rem;
         }
 
         .music-item {
             background: var(--white);
-            padding: 15px 20px;
-            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            border-radius: 0.625rem;
             border-left: 4px solid var(--primary-blue);
             font-style: italic;
             box-shadow: 0 4px 15px var(--shadow-soft);
@@ -742,13 +671,13 @@
         .memes-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
+            gap: 2rem;
+            margin: 2.5rem 0;
         }
 
         .meme-card {
             background: var(--white);
-            border-radius: 20px;
+            border-radius: 1.25rem;
             overflow: hidden;
             box-shadow: 0 15px 40px var(--shadow-warm);
             border: 3px solid var(--primary-yellow);
@@ -767,44 +696,66 @@
         }
 
         /* Footer */
-        footer {
+        .footer {
             background: linear-gradient(135deg, var(--text-warm) 0%, #654321 100%);
             color: var(--accent-light);
             text-align: center;
-            padding: 40px 0;
-            margin-top: 60px;
+            padding: 2.5rem 0;
+            margin-top: 4rem;
         }
 
-        footer p {
+        .footer p {
             color: var(--accent-light);
             font-weight: 500;
+        }
+
+        /* Center section */
+        .center-section {
+            text-align: center;
+            margin: 2.5rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--accent-warm) 0%, var(--white) 100%);
+            border-radius: 1.25rem;
+            border: 2px solid var(--primary-yellow);
+        }
+
+        /* Utility classes */
+        .hidden {
+            display: none;
+        }
+
+        .highlight-text {
+            color: var(--primary-orange);
+            font-weight: 700;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .container {
-                padding: 0 20px;
+                padding: 0 1rem;
             }
 
             .header-content {
                 flex-direction: column;
                 text-align: center;
-                gap: 25px;
+                gap: 1.5rem;
             }
 
             .nav-menu {
-                flex-direction: column;
-                align-items: center;
+                display: none;
             }
 
-            .nav-item {
-                width: 100%;
-                text-align: center;
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.active {
+                display: block;
             }
 
             .section {
-                padding: 30px 20px;
-                margin: 15px 0;
+                padding: 2rem 0;
+                margin: 1rem 0;
             }
 
             .section h2 {
@@ -821,57 +772,32 @@
             }
 
             .hero {
-                padding: 50px 20px;
+                padding: 3rem 1.25rem;
             }
 
             .hero h3 {
-                font-size: 2.2rem;
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                text-align: center;
             }
         }
 
-        .hidden {
-            display: none;
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
         }
 
-        /* Animations */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Special styling for key sections */
-        .info-box {
-            background: linear-gradient(135deg, var(--accent-warm) 0%, var(--white) 100%);
-            padding: 40px;
-            border-radius: 20px;
-            margin: 30px 0;
-            border: 3px solid var(--primary-yellow);
-            box-shadow: 0 12px 35px var(--shadow-soft);
-        }
-
-        .highlight-text {
-            color: var(--primary-orange);
-            font-weight: 700;
-        }
-
-        .center-section {
-            text-align: center;
-            margin: 40px 0;
-            padding: 30px;
-            background: linear-gradient(135deg, var(--accent-warm) 0%, var(--white) 100%);
-            border-radius: 20px;
-            border: 2px solid var(--primary-yellow);
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--primary-blue);
+            outline-offset: 2px;
         }
     </style>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
@@ -894,27 +820,38 @@
         </div>
     </header>
 
-    <nav>
+    <nav class="nav">
         <div class="container">
             <div class="nav-menu">
-                <div class="nav-item active" data-section="main">Главная</div>
-                <div class="nav-item" data-section="about">Обо мне</div>
-                <div class="nav-item" data-section="services">Услуги</div>
-                <div class="nav-item" data-section="reviews">Отзывы</div>
-                <div class="nav-item" data-section="qa">Вопрос-Ответ</div>
-                <div class="nav-item" data-section="literature">Литература</div>
-                <div class="nav-item" data-section="music">Музыка</div>
-                <div class="nav-item" data-section="humor">Юмор</div>
-                <div class="nav-item" data-section="contacts">Контакты</div>
+                <a href="#main" class="nav-item active">Главная</a>
+                <a href="#about" class="nav-item">Обо мне</a>
+                <a href="#services" class="nav-item">Услуги</a>
+                <a href="#reviews" class="nav-item">Отзывы</a>
+                <a href="#qa" class="nav-item">Вопрос-Ответ</a>
+                <a href="#literature" class="nav-item">Литература</a>
+                <a href="#music" class="nav-item">Музыка</a>
+                <a href="#humor" class="nav-item">Юмор</a>
+                <a href="#contacts" class="nav-item">Контакты</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="#main" class="nav-item" onclick="closeMobileMenu()">Главная</a>
+                <a href="#about" class="nav-item" onclick="closeMobileMenu()">Обо мне</a>
+                <a href="#services" class="nav-item" onclick="closeMobileMenu()">Услуги</a>
+                <a href="#reviews" class="nav-item" onclick="closeMobileMenu()">Отзывы</a>
+                <a href="#qa" class="nav-item" onclick="closeMobileMenu()">Вопрос-Ответ</a>
+                <a href="#literature" class="nav-item" onclick="closeMobileMenu()">Литература</a>
+                <a href="#music" class="nav-item" onclick="closeMobileMenu()">Музыка</a>
+                <a href="#humor" class="nav-item" onclick="closeMobileMenu()">Юмор</a>
+                <a href="#contacts" class="nav-item" onclick="closeMobileMenu()">Контакты</a>
             </div>
         </div>
     </nav>
 
     <main>
-        <div class="container">
-            <!-- Главная -->
-            <section id="main" class="section active">
-                <h2>Добро пожаловать в Мир Благополучия</h2>
+        <!-- Главная -->
+        <section id="main" class="section">
+            <div class="container">
                 <div class="hero">
                     <div class="hero-content">
                         <h3>Алексей Анатольевич Зданович</h3>
@@ -956,10 +893,12 @@
                         <p style="font-size: 0.95rem; margin-top: 15px; opacity: 0.9; font-weight: 500;">Комиссия банка: 2,5-3,5%</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Обо мне -->
-            <section id="about" class="section">
+        <!-- Обо мне -->
+        <section id="about" class="section">
+            <div class="container">
                 <h2>Обо мне</h2>
                 
                 <div class="info-box">
@@ -994,10 +933,12 @@
                         терапию фокусированную на переносе. Применяю также коучинг и гипнотерапию.
                     </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Услуги -->
-            <section id="services" class="section">
+        <!-- Услуги -->
+        <section id="services" class="section" style="background: var(--gray-50);">
+            <div class="container">
                 <h2>Услуги и цены</h2>
 
                 <div class="center-section">
@@ -1010,7 +951,7 @@
 
                 <h3>Премиум услуги</h3>
                 <div class="services-grid">
-                    <div class="service-card premium-card">
+                    <div class="card premium-card">
                         <h4>Душевный чекап Вас и ваших близких</h4>
                         
                         <div style="margin: 25px 0;">
@@ -1050,17 +991,17 @@
                         </div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Тюнинг личности</h4>
                         <p>Тонкая настройка навыков и черт под ваши задачи и запросы. Сделаем сильные стороны еще сильнее, а слабые — менее проблемными. Повысим личную эффективность, стрессоустойчивость, уверенность.</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Апгрейд личности</h4>
                         <p>Трансформация, преодоление внутренних барьеров, реализация скрытого потенциала. Переход на новый уровень личностного развития и мышления, другое восприятие мира и себя, смена жизненных сценариев.</p>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Пси-путешествия</h4>
                         <p style="margin-bottom: 20px; font-style: italic;">(воображаемые образы)</p>
                         <p>Особая форма внутренней работы, где воображение становится проводником к глубинным ресурсам личности.</p>
@@ -1087,58 +1028,60 @@
 
                 <h3>Основные услуги</h3>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Индивидуальная консультация</h4>
                         <p>Кризис, тревожные состояния, фобии, депрессии, нарушения сна, психосоматические расстройства, проблемы сексуальности, в личной жизни и общении, зависимости, неустойчивая самооценка, непринятие себя.</p>
                         <div class="price">15 000 руб / 45 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Семейная психотерапия</h4>
                         <p>Конфликты, супружеская терапия, проблемы в сексуальной сфере, вопросы воспитания детей, проблемы подросткового возраста.</p>
                         <div class="price">25 000 руб / 90 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Групповая психотерапия</h4>
                         <p>Работа в группе единомышленников, обмен опытом, взаимная поддержка в решении схожих проблем.</p>
                         <div class="price">4 000 руб / 90 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Коучинг</h4>
                         <p>Поддержка в достижении личных и профессиональных целей. Помогает найти ресурсы, раскрыть потенциал, выстроить стратегию действий и двигаться к результату без лишнего стресса.</p>
                         <div class="price">25 000 руб / 45 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Супервизия индивидуальная</h4>
                         <p>Формат «один на один» для специалистов. Разбор рабочих случаев, профессиональных трудностей. Помогает видеть новые подходы, повышать качество работы и избегать профессионального выгорания.</p>
                         <div class="price">8 000 руб / 50 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Супервизия групповая</h4>
                         <p>Совместный разбор случаев и обмен опытом в профессиональном сообществе. Участники получают поддержку коллег, новые идеи и уверенность в своей работе.</p>
                         <div class="price">3 000 руб / 90 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Детская психотерапия</h4>
                         <p>Помогает ребёнку справляться с тревогами, страхами, трудностями в общении и обучении. Через игру, рисунок и безопасный диалог ребёнок учится выражать эмоции и находить поддержку.</p>
                         <div class="price">12 000 руб / 45 мин</div>
                     </div>
 
-                    <div class="service-card">
+                    <div class="card">
                         <h4>Подростковая психотерапия</h4>
                         <p>Поддержка в период взросления, когда особенно остро встают вопросы самооценки, отношений и выбора. Помогает подростку лучше понять себя, справляться с переживаниями и уверенно строить будущее.</p>
                         <div class="price">14 000 руб / 45 мин</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Отзывы -->
-            <section id="reviews" class="section">
+        <!-- Отзывы -->
+        <section id="reviews" class="section">
+            <div class="container">
                 <h2>Отзывы клиентов</h2>
                 
                 <div class="review-card">
@@ -1168,10 +1111,12 @@
                         </a>
                     </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Q&A -->
-            <section id="qa" class="section">
+        <!-- Q&A -->
+        <section id="qa" class="section">
+            <div class="container">
                 <h2>Вопросы и ответы</h2>
                 
                 <div class="qa-item">
@@ -1255,10 +1200,12 @@
                         <p>Да, возможны как очные консультации, так и онлайн-встречи в безопасном и удобном формате.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Литература -->
-            <section id="literature" class="section">
+        <!-- Литература -->
+        <section id="literature" class="section">
+            <div class="container">
                 <h2>Рекомендуемая литература</h2>
                 
                 <h3>Для специалистов</h3>
@@ -1308,10 +1255,12 @@
                         <p>Практические методы борьбы с депрессией.</p>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Музыка -->
-            <section id="music" class="section">
+        <!-- Музыка -->
+        <section id="music" class="section">
+            <div class="container">
                 <h2>Музыка для души</h2>
                 <p style="text-align: center; margin-bottom: 40px; font-size: 1.3rem; color: var(--text-medium); font-weight: 600;">
                     Музыка, которая помогает в терапевтическом процессе и личном развитии
@@ -1343,10 +1292,12 @@
                         <div class="music-item">"Greensleeves" — David Nevue</div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Юмор -->
-            <section id="humor" class="section">
+        <!-- Юмор -->
+        <section id="humor" class="section">
+            <div class="container">
                 <h2>Терапевтический юмор</h2>
                 <p style="text-align: center; margin-bottom: 40px; font-size: 1.3rem; color: var(--text-medium); font-weight: 600;">
                     Смех — лучшее лекарство! Подборка мемов про психологию и жизнь
@@ -1377,10 +1328,12 @@
                         <img src="./images/meme6.jpg" alt="Мем про решение проблем" onerror="this.parentElement.style.display='none'">
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Контакты -->
-            <section id="contacts" class="section">
+        <!-- Контакты -->
+        <section id="contacts" class="section">
+            <div class="container">
                 <h2>Контакты</h2>
                 
                 <div style="text-align: center; margin: 40px 0; padding: 40px; background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-yellow) 100%); border-radius: 25px; color: white; box-shadow: 0 15px 40px var(--shadow-warm);">
@@ -1431,11 +1384,11 @@
                         "Лучшее время для обращения к специалисту — сегодня"
                     </p>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="container">
             <p style="font-size: 1.1rem; font-weight: 600;">&copy; 2024 Доктор Зданович и Мир Благополучия</p>
             <p style="margin: 10px 0; font-weight: 500;">Через тернии к людям • Практика с 1992 года</p>
@@ -1448,33 +1401,42 @@
     <script>
         // Navigation functionality
         function showSection(sectionId) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-
-            // Remove active class from navigation
+            // Get all nav items
             const navItems = document.querySelectorAll('.nav-item');
+            
+            // Remove active class from all nav items
             navItems.forEach(item => {
                 item.classList.remove('active');
             });
 
-            // Show selected section
+            // Add active class to clicked nav item
+            const clickedItem = document.querySelector(`[href="#${sectionId}"]`);
+            if (clickedItem) {
+                clickedItem.classList.add('active');
+            }
+
+            // Scroll to section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
-                targetSection.classList.add('active');
+                targetSection.scrollIntoView({ behavior: 'smooth' });
             }
-
-            // Add active class to corresponding navigation item
-            const activeNavItem = document.querySelector(`[data-section="${sectionId}"]`);
-            if (activeNavItem) {
-                activeNavItem.classList.add('active');
-            }
-
-            // Scroll to top smoothly
-            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Handle nav item clicks
+        document.addEventListener('DOMContentLoaded', function() {
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            navItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        const sectionId = href.substring(1);
+                        showSection(sectionId);
+                    }
+                });
+            });
+        });
 
         // Q&A functionality
         function toggleAnswer(questionElement) {
@@ -1500,79 +1462,62 @@
             }
         }
 
-        // Initialize page
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+
+        function closeMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.remove('active');
+        }
+
+        // Smooth scroll for anchor links
         document.addEventListener('DOMContentLoaded', function() {
-            // Set up navigation event listeners
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(item => {
-                item.addEventListener('click', function(e) {
+            const anchorLinks = document.querySelectorAll('a[href^="#"]');
+            
+            anchorLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    const sectionId = this.getAttribute('data-section');
-                    if (sectionId) {
-                        showSection(sectionId);
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                     }
                 });
             });
+        });
 
-            // Show main section by default
-            showSection('main');
+        // Add intersection observer for nav highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navItems = document.querySelectorAll('.nav-item');
 
-            // Scroll animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver(function(entries) {
+            const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
+                        // Remove active class from all nav items
+                        navItems.forEach(item => item.classList.remove('active'));
+                        
+                        // Add active class to corresponding nav item
+                        const activeNavItem = document.querySelector(`[href="#${entry.target.id}"]`);
+                        if (activeNavItem) {
+                            activeNavItem.classList.add('active');
+                        }
                     }
                 });
-            }, observerOptions);
-
-            // Observe cards for animations
-            const cards = document.querySelectorAll('.service-card, .review-card, .meme-card, .book-item, .music-item');
-            cards.forEach(card => {
-                card.classList.add('fade-in');
-                observer.observe(card);
+            }, {
+                threshold: 0.3
             });
 
-            // Handle logo error gracefully
-            const logo = document.querySelector('.logo img');
-            if (logo) {
-                logo.addEventListener('error', function() {
-                    this.style.display = 'none';
-                    this.parentElement.innerHTML = '<div class="logo-placeholder">МБ</div>';
-                });
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Performance optimization
-        window.addEventListener('load', function() {
-            // Preload critical images
-            const criticalImages = [
-                './images/doctor1.jpg',
-                './images/doctor2.jpg'
-            ];
-            
-            criticalImages.forEach(src => {
-                const img = new Image();
-                img.src = src;
+            sections.forEach(section => {
+                observer.observe(section);
             });
         });
     </script>
